@@ -1,6 +1,6 @@
-f02cc28f6d690c6c2f9e07b82d9b772c *DESCRIPTION
+7eec15a0056fa8d88b34c755ff633108 *DESCRIPTION
 3f4dab2e65ce742496463fb4d80383b5 *NAMESPACE
-0caa5f28669d66c0420815c86534869b *NEWS.md
+175a14a98a51430970b6df6f89f0cc91 *NEWS.md
 151151450e1adef0765b158e53cca07e *R/aaa_utils.R
 cb3874aa84d79e066cc898d66979d265 *R/acti_fill_zeros.R
 a0d5c131f0d1a68f089f8cd515443930 *R/acti_raw_data.R
@@ -8,8 +8,8 @@ bae893d07a6c279f49da91caf4386412 *R/acti_resample.R
 e147184dade7bcb5bb90f599108a3534 *R/acti_separate_times.R
 7365cbb5bce40d819585cfc684aa3d9e *R/create_day_inclusion.R
 605f07a496ff04afd15444a0759f666f *R/flag_spike.R
-86a9a9b411d4f43e4fe2ab7dfc83e7b5 *R/get_dynamic_range.R
-8d645e9f53d98559f60a488e48efe3db *R/get_sample_rate.R
+7a011da6211aa3aa1d0290ea73a67d18 *R/get_dynamic_range.R
+cb930573bac599ab62e22dd607bb2cec *R/get_sample_rate.R
 ecae2841c33466d6baa52fb4900d0771 *R/mark_condition.R
 f2217e04d19bc491d4fcad2ccfa67896 *R/safe_converters.R
 da1ea08ab89f94f4e773776255ee66a3 *R/tidy_axes.R
@@ -40,5 +40,5 @@ bb443d12c3f3bd422ce6d2576bc33af6 *man/is.AccData.Rd
 b64cd25e77cf14c939bd96b88ae02553 *man/xyz.Rd
 27ea6df3935872c9277b5e6f88487ad9 *tests/testthat.R
 43ac01867b92b2f60e05cd2046f83bc2 *tests/testthat/test-baseline.R
-1a8acb6720e0cfc32722b5e33c073a66 *tests/testthat/test-flag-helpers.R
+3cd6674149206ac30f2259b2fcd904eb *tests/testthat/test-flag-helpers.R
 e75742541e702d0676e93643ee8c5aed *tests/testthat/test-new-helpers.R
