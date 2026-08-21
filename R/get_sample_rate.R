@@ -5,6 +5,14 @@ get_sample_rate_from_header = function(hdr, sample_rate = NULL) {
     if (length(sample_rate) == 0) {
       sample_rate = NULL
     }
+    if (is.null(sample_rate))  {
+      sample_rate = hdr$SampleRate
+      sample_rate = as.numeric(sample_rate)
+      if (length(sample_rate) == 0 ||
+          all(is.na(sample_rate))) {
+        sample_rate = NULL
+      }
+    }
   }
   sample_rate
 }
@@ -14,10 +22,12 @@ get_sample_rate_from_header = function(hdr, sample_rate = NULL) {
 #' @param data A data set of actigraphy/activity data
 #' @param sample_rate the sample rate.  If this is not \code{NULL}, then
 #' it will be guess from the header or the data or the data separation
+#' @param flag_estimated if `TRUE`, then the output will have the attribute
+#' `"estimated"`, which is a logical indicated if it was found or estimated
 #'
 #' @return A length-1 numeric vector
 #' @export
-get_sample_rate = function(data, sample_rate = NULL) {
+get_sample_rate = function(data, sample_rate = NULL, flag_estimated = FALSE) {
   if (!is.null(sample_rate)) {
     assertthat::assert_that(
       is.numeric(sample_rate) && is.finite(sample_rate)
@@ -31,8 +41,10 @@ get_sample_rate = function(data, sample_rate = NULL) {
     sample_rate = attr(data, "sample_rate")
   }
   if (is.null(sample_rate) || is.na(sample_rate)) {
-    sample_rate = get_sample_rate_from_header(data)
+    sample_rate = get_sample_rate_from_header(attr(data, "header"))
   }
+  estimated = FALSE
+
   if (
     (is.null(sample_rate) || is.na(sample_rate)) &&
     any(
@@ -47,6 +59,7 @@ get_sample_rate = function(data, sample_rate = NULL) {
     if (is.null(time)) {
       time = data[["HEADER_TIMESTAMP"]]
     }
+    stopifnot(!is.null(time))
     d = diff(time)
     units(d) = "secs"
     rm(list = "time")
@@ -61,11 +74,15 @@ get_sample_rate = function(data, sample_rate = NULL) {
       }
     }
     stopifnot(length(sample_rate) == 1)
+    estimated = TRUE
   }
   stopifnot(!is.null(sample_rate))
   assertthat::assert_that(
     is.numeric(sample_rate) && is.finite(sample_rate)
   )
+  if (flag_estimated) {
+    attr(sample_rate, "estimated") = estimated
+  }
   return(sample_rate)
 }
 
