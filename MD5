@@ -1,6 +1,6 @@
-9784759aceca5c2536fc23cb0d735bf4 *DESCRIPTION
-ef1fd019f2a94a3ee53c5b4347d492b3 *NAMESPACE
-6b0eaca3d4e50522347ee501f8bea89d *NEWS.md
+bbf3711311fe7eb5fa547e6c14e6624d *DESCRIPTION
+82348d901dcccbc6bd4e90ebaf87c8ee *NAMESPACE
+593713086f345e672ed72540d405acd0 *NEWS.md
 151151450e1adef0765b158e53cca07e *R/aaa_utils.R
 bbe8387f8ca38e776d61f667dae6fc8d *R/acti_fill_zeros.R
 a0d5c131f0d1a68f089f8cd515443930 *R/acti_raw_data.R
@@ -13,6 +13,7 @@ f2a3fab1a1928e168b41a8bc5522f6b9 *R/get_sample_rate.R
 ecae2841c33466d6baa52fb4900d0771 *R/mark_condition.R
 f2217e04d19bc491d4fcad2ccfa67896 *R/safe_converters.R
 e1e66ee94a0431e3da32159542580a9e *R/tidy_axes.R
+d7b3e23523444140bc13a7f100433509 *R/time_to_minute.R
 dac9bc30b7b7ec9cb8760711d46780d4 *R/transformations.R
 ee5e88edd34e7afabeac0cf63ace31f7 *R/utils-pipe.R
 1688aba60f0fe07defda8841c31b8462 *R/xyz.R
@@ -21,12 +22,20 @@ aa96069b4547ec3a53d636a7eba4c16d *data/acti_raw_data.rda
 386310d4521a86705c397bef266aa050 *data/txyz.rda
 8c30c59a491c85f4a258f100d53caece *data/xyz.rda
 7b61533015161b43d0267dd2327eeec6 *data/xyzt.rda
+926d7d3169d648dd7ee729c2e46a274b *man/acti_day_index.Rd
+ff31a0b5eae0f94d055cd3a09d298ea0 *man/acti_day_start.Rd
 193d907a4fc34ede6afc03e07f9b62ec *man/acti_fill_zeros.Rd
+17da1efdf4e44dc005bdcf121f4aa884 *man/acti_hms_to_minute.Rd
+9a4245101ab23e3928ab5962f758a19e *man/acti_minute_to_hms.Rd
 5a9f449d4ecbb1660f9aeb7c5225cf8c *man/acti_raw_data.Rd
+f1830ee81ef5e84ced5cd8e6b2e43a24 *man/acti_repeat_time_of_day.Rd
 c28238ae14fd5cb81f8a35fa2eb0b5b6 *man/acti_resample.Rd
 324a806b41faad8aa61e3235d8a4157d *man/acti_separate_time.Rd
+f93834278f6ca07374798aeb0ceda19b *man/acti_split_intervals_at_midnight.Rd
 f5ff0e65a3326befecb27dd50c73253b *man/acti_standardize_data.Rd
 1525b497d92fe2955faea221077904c0 *man/acti_tidy_axes.Rd
+1cd85d73df21a007aaea1f9ce92406ea *man/acti_time_of_day.Rd
+c32e11ab35d4699b79a631d5becd8c23 *man/acti_time_to_minute.Rd
 a2c2af89c89d706347e7a0116dc7a287 *man/as_convert_safe.Rd
 a72405723a6f68ba4b1e4e2f73e09ecc *man/create_day_inclusion.Rd
 1a929d41dad548d91797cc4c80b9d89b *man/flag_qc.Rd
@@ -42,3 +51,4 @@ b64cd25e77cf14c939bd96b88ae02553 *man/xyz.Rd
 1f912f25bfe506e4ace4fdcd0aaac7c8 *tests/testthat/test-baseline.R
 88c4ebec49923d21d6a668032de17bfb *tests/testthat/test-flag-helpers.R
 f5b84120c716266b5b01a12963ff3a36 *tests/testthat/test-new-helpers.R
+77da4c6ab7211266c7472f538ae3f194 *tests/testthat/test-time-to-minute.R
